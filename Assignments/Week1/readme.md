@@ -3,17 +3,45 @@
 [Github Repo](https://github.com/HighCheems/ReponayKphaiChuyende)
 ## Install Ubuntu desktop
 [Ubuntu desktop](https://ubuntu.com/download/desktop)
-## Install Python 3.6 or later
-### [Python 3.9.2](https://www.python.org/downloads/)
-
+## Install Python 3.9.2 on Ubuntu
 ### [Tutorial](https://phoenixnap.com/kb/how-to-install-python-3-ubuntu)
-
-#### Step 3
+#### Step 1: Update Local Repositories
+```
+sudo apt update
+```
+#### Step 2: Install Supporting Software
+```
+sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
+```
+#### Step 3: Download the Latest Version of Python Source Code
 ```
 cd /tmp
 ```
 ```
 wget https://www.python.org/ftp/python/3.9.2/Python-3.9.2.tgz
+```
+#### Step 4: Extract Compressed Files
+```
+tar -xf Python-3.9.2.tgz
+```
+#### Step 5: Test System and Optimize Python
+```
+cd Python-3.9.2
+```
+```
+./configure --enable-optimizations
+```
+#### Step 6: Install a Second Instance of Python (recommended)
+```
+sudo make altinstall
+```
+#### (Option) Overwrite Default Python Installation
+```
+sudo make install
+```
+#### Step 7: Verify Python Version
+```
+python3 --version
 ```
 ## Install OpenCV-Python Package
 [OpenCV-Python](https://pypi.org/project/opencv-python/)
