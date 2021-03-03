@@ -61,3 +61,4 @@ pip3 --version
 ```
 # 2. Write a “Hello world” app
 ## Read, Write and Display a video/webcam using OpenCV python
+### [Tutorial](https://learnopencv.com/read-write-and-display-a-video-using-opencv-cpp-python/)
