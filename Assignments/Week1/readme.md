@@ -47,15 +47,11 @@ python3 --version
 ## Install OpenCV-Python Package
 [OpenCV-Python](https://pypi.org/project/opencv-python/)
 ### [Tutorial](https://docs.opencv.org/master/d2/de6/tutorial_py_setup_in_ubuntu.html)
-#### Step 1
-```
-sudo apt-get install python3-opencv
-```
-#### Step 2: Install pip to manage module/package
+#### Step 1: Install pip to manage module/package (pip is installed -> go to step 2)
 ```
 sudo apt install python3-pip
 ```
-#### Step 3: Install OpenCV
+#### Step 2: Install OpenCV
 ```
 pip3 install opencv-python
 ```
