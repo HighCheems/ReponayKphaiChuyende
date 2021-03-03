@@ -45,5 +45,10 @@ python3 --version
 ```
 ## Install OpenCV-Python Package
 [OpenCV-Python](https://pypi.org/project/opencv-python/)
+### [Tutorial](https://docs.opencv.org/master/d2/de6/tutorial_py_setup_in_ubuntu.html)
+#### Step 1
+```
+sudo apt-get install python3-opencv
+```
 # 2. Write a “Hello world” app
 ## Read, Write and Display a video/webcam using OpenCV python
