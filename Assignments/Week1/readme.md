@@ -54,7 +54,7 @@ sudo apt-get install python3-opencv
 ```
 sudo apt install python3-pip
 ```
-#### Step 3:
+#### Step 3: Install OpenCV
 ```
 pip3 install opencv-python
 ```
