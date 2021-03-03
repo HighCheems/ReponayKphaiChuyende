@@ -50,5 +50,13 @@ python3 --version
 ```
 sudo apt-get install python3-opencv
 ```
+#### Step 2: Install pip to manage module/package
+```
+sudo apt install python3-pip
+```
+#### Step 3:
+```
+pip3 install opencv-python
+```
 # 2. Write a “Hello world” app
 ## Read, Write and Display a video/webcam using OpenCV python
