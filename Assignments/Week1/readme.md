@@ -3,8 +3,9 @@
 [Github Repo](https://github.com/HighCheems/ReponayKphaiChuyende)
 ## Install Ubuntu desktop
 [Ubuntu desktop](https://ubuntu.com/download/desktop)
-## Install Python 3.9.2 on Ubuntu
+## Install Python 3.9.2 on Ubuntu (Ubuntu 20.04.2.0 LTS is included with Python 3.8.5)
 ### [Tutorial](https://phoenixnap.com/kb/how-to-install-python-3-ubuntu)
+
 #### Step 1: Update Local Repositories
 ```
 sudo apt update
