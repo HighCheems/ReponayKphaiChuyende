@@ -63,11 +63,12 @@ pip3 --version
 ## Read, Write and Display a video/webcam using OpenCV python
 ### [Tutorial](https://learnopencv.com/read-write-and-display-a-video-using-opencv-cpp-python/)
 #### Read a video
+#### [Video](https://doc-0k-ak-docs.googleusercontent.com/docs/securesc/50egentd6t97jvre2gen3broigv7uqik/pc6944pii194cd2hv62ndfc2d353427i/1614848625000/17141051394050475573/17141051394050475573/1BWPzk2y88_QBEzss0Cod3OraE97hag7K?e=download&authuser=0&nonce=metavcvh3sumu&user=17141051394050475573&hash=u3kd9kh2nj8k02gb5u3nu1li2dhil58d)
 ```python
 import numpy as np
 from cv2 import cv2 as cv
 
-cap = cv.VideoCapture('/home/cheems/Documents/bonk.mp4')
+cap = cv.VideoCapture('/home/cheems/Documents/bonk360p.mp4')
 
 while cap.isOpened():
     ret, frame = cap.read()
@@ -75,8 +76,15 @@ while cap.isOpened():
     if not ret:
         print("Can't receive frame (stream end?). Exiting ...")
         break
-    gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
-    cv.imshow('frame', gray)
+    
+    #convert all colors of frame to gray
+    #gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
+    #cv.imshow('frame', gray)
+
+    #show original frame
+    cv.imshow('bonk 360p',frame)
+
+    #press q to close frame
     if cv.waitKey(1) == ord('q'):
         break
     
