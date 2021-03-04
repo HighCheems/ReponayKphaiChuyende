@@ -103,6 +103,7 @@ cap = cv.VideoCapture('/home/cheems/Videos/bonk360p.mp4')
 #settings for output video
 frame_width = int(cap.get(3))
 frame_height = int(cap.get(4))
+#check codecs on https://www.fourcc.org/codecs.php
 fourcc = cv.VideoWriter_fourcc(*'MP4V')
 fps = 23
 
