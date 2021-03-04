@@ -60,9 +60,12 @@ pip3 install opencv-python
 pip3 --version
 ```
 # 2. Write a “Hello world” app
+```python
+print('Hello world')
+```
 ## Read, Write and Display a video/webcam using OpenCV python
 ### [Tutorial](https://learnopencv.com/read-write-and-display-a-video-using-opencv-cpp-python/)
-#### [Video Download](https://drive.google.com/file/d/1BWPzk2y88_QBEzss0Cod3OraE97hag7K/view?usp=sharing)
+### [Video Download](https://drive.google.com/file/d/1BWPzk2y88_QBEzss0Cod3OraE97hag7K/view?usp=sharing)
 ##### Read and display a video
 ```python
 import numpy as np
@@ -127,7 +130,7 @@ cap.release()
 out.release()
 cv.destroyAllWindows()
 ```
-### Capture and write to file from webcam
+#### Capture and write to file from webcam
 ```python
 from cv2 import cv2
 
@@ -149,6 +152,4 @@ while(video.isOpened()):
 video.release()
 out.release()
 cv2.destroyAllWindows()
-
-
 ```
