@@ -60,12 +60,9 @@ pip3 install opencv-python
 pip3 --version
 ```
 # 2. Write a “Hello world” app
-```python
-print('Hello world')
-```
 ## Read, Write and Display a video/webcam using OpenCV python
 ### [Tutorial](https://learnopencv.com/read-write-and-display-a-video-using-opencv-cpp-python/)
-### [Video Download](https://drive.google.com/file/d/1BWPzk2y88_QBEzss0Cod3OraE97hag7K/view?usp=sharing)
+#### [Video Download](https://drive.google.com/file/d/1BWPzk2y88_QBEzss0Cod3OraE97hag7K/view?usp=sharing)
 ##### Read and display a video
 ```python
 import numpy as np
@@ -106,7 +103,6 @@ cap = cv.VideoCapture('/home/cheems/Videos/bonk360p.mp4')
 #settings for output video
 frame_width = int(cap.get(3))
 frame_height = int(cap.get(4))
-#check codecs on https://www.fourcc.org/codecs.php
 fourcc = cv.VideoWriter_fourcc(*'MP4V')
 fps = 23
 
@@ -130,22 +126,30 @@ cap.release()
 out.release()
 cv.destroyAllWindows()
 ```
-#### Capture and write to file from webcam
+### Capture and write to file from webcam
 ```python
 from cv2 import cv2
 
+#choosing camera, in my case, the webcam is '-1' 
 video = cv2.VideoCapture(-1)
 
+#check camera is available
 if (video.isOpened()==False):
     print("Unable to open camera")
+    
+#define codec
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 out = cv2.VideoWriter('output.avi',fourcc,30.0,(640,480))
 
 while(video.isOpened()):
     check, frame = video.read()
     if(check==True):
+        #write frame
         out.write(frame)
+        #show frame on the screen to check
         cv2.imshow('frame',frame)
+        
+        #press q to stop
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
