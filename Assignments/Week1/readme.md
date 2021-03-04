@@ -62,8 +62,8 @@ pip3 --version
 # 2. Write a “Hello world” app
 ## Read, Write and Display a video/webcam using OpenCV python
 ### [Tutorial](https://learnopencv.com/read-write-and-display-a-video-using-opencv-cpp-python/)
-#### Read and display a video
 #### [Video Download](https://drive.google.com/file/d/1BWPzk2y88_QBEzss0Cod3OraE97hag7K/view?usp=sharing)
+##### Read and display a video
 ```python
 import numpy as np
 from cv2 import cv2 as cv
@@ -90,5 +90,39 @@ while cap.isOpened():
         break
     
 cap.release()
+cv.destroyAllWindows()
+```
+##### Write and display a video
+```python
+import numpy as np
+from cv2 import cv2 as cv
+
+#please change your path to video you have downloaded here
+cap = cv.VideoCapture('/home/cheems/Videos/bonk360p.mp4')
+
+#settings for output video
+frame_width = int(cap.get(3))
+frame_height = int(cap.get(4))
+fourcc = cv.VideoWriter_fourcc(*'MP4V')
+fps = 23
+
+#please change your path for your output video here
+out = cv.VideoWriter('/home/cheems/Videos/bonk_out.mp4',fourcc, fps, (frame_width,frame_height))
+
+while(True):
+  ret, frame = cap.read()
+
+  if ret == True: 
+    out.write(frame)
+    cv.imshow('output',frame)
+
+    #press q to stop writing video
+    if cv.waitKey(1) & 0xFF == ord('q'):
+      break
+  else:
+    break  
+
+cap.release()
+out.release()
 cv.destroyAllWindows()
 ```
