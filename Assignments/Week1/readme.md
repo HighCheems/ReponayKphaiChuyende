@@ -68,7 +68,7 @@ pip3 --version
 import numpy as np
 from cv2 import cv2 as cv
 
-#change your path to video you have downloaded if needed
+#please change your path to video you have downloaded here
 cap = cv.VideoCapture('/home/cheems/Videos/bonk360p.mp4')
 
 while cap.isOpened():
