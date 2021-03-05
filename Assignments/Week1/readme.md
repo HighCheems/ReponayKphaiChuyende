@@ -1,6 +1,6 @@
 # 1. Setup Environment
 ## Create GitHub Repo
-[Github Repo](https://github.com/HighCheems/ReponayKphaiChuyende)
+[Github Repo](https://docs.github.com/en/github/getting-started-with-github/create-a-repo)
 ## Install Ubuntu desktop
 [Ubuntu desktop](https://ubuntu.com/download/desktop)
 ## Install Python 3.9.2 on Ubuntu (Ubuntu 20.04.2.0 LTS is included with Python 3.8.5)
