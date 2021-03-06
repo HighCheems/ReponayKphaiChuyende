@@ -160,3 +160,5 @@ video.release()
 out.release()
 cv2.destroyAllWindows()
 ```
+### Demo of webcam video
+![](Hnet-image.gif)
