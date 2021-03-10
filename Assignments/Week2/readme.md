@@ -9,3 +9,8 @@
 ```python
 cvtColor(src, bwsrc, cv::COLOR_RGB2GRAY);
 ```
+# 3. Python implementation
+
+# 4. Verilog implementation
+
+# 5. Comparation
