@@ -1,6 +1,7 @@
 # 1. Setup environment
 ## Install ModelSim on Ubuntu
 ### [Tutorial](https://gist.github.com/Razer6/cafc172b5cffae189b4ecda06cf6c64f)
+### [Youtube](https://www.youtube.com/watch?v=5y1zwylqgUM)
 
 # 2. Color conversion algorithms
 ## RGB -> GRAY
