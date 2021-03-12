@@ -4,7 +4,7 @@
 ### [Youtube](https://www.youtube.com/watch?v=5y1zwylqgUM)
 #### Step 0: Please download 2 parts of ModelSim [here](https://fpgasoftware.intel.com/?product=modelsim_ae#tabs-2) before continue to next step
 #### Step 1: Install ModelSim: Go to the folder have 2 parts of ModelSim (if they do not in the default folder). 
-##### Setting permision Execute: Allow executing file as program (properties of file -> Permissions -> Tick "Allow executing file as program"
+##### Setting permision Execute: Allow executing file as program (Another way: Properties of file -> Permissions -> Tick "Allow executing file as program")
 ```
 chmod +x ModelSimProSetup-20.4.0.72-linux
 ```
