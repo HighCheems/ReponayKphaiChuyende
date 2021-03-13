@@ -39,7 +39,34 @@ cd ~/intelFPGA_pro/20.4/modelsim_ase/linuxaloem/
 cvtColor(src, bwsrc, cv::COLOR_RGB2GRAY);
 ```
 # 3. Python implementation
+```python
+from cv2 import cv2 as cv
 
+# please change your image path
+img = cv.imread('/home/cheems/Pictures/cheems_rgb.jpg', cv.IMREAD_UNCHANGED)
+#print('Original Dimensions : ',img.shape)
+ 
+# scale settings
+scale_percent = 30 # percent of original size
+width = int(img.shape[1] * scale_percent / 100)
+height = int(img.shape[0] * scale_percent / 100)
+dim = (width, height)
+  
+# resize image
+resized = cv.resize(img, dim, interpolation = cv.INTER_AREA)
+#print('Resized Dimensions : ',resized.shape)
+cv.imshow("Resized image", resized)
+
+# grayscale image
+# RGB[A] to Gray: Y ← 0.299⋅R + 0.587⋅G + 0.114⋅B
+grayscaled = cv.cvtColor(resized, cv.COLOR_RGB2GRAY)
+cv.imshow("Grayscaled image", grayscaled)
+
+# press any keys, dont press Close(X)
+cv.waitKey(0)
+
+cv.destroyAllWindows()
+```
 # 4. Verilog implementation
 
 # 5. Comparation
