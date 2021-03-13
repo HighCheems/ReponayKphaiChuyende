@@ -31,6 +31,36 @@ libxft2:i386 libxrender1:i386 \libxt6:i386 libxtst6:i386
 cd ~/intelFPGA_pro/20.4/modelsim_ase/linuxaloem/
 ./vsim
 ```
+## Install Vivado on Ubuntu
+### [Youtube](https://www.youtube.com/watch?v=1uJzjvgTQUk)
+#### Step 0: Please download Linux Self Extracting Web Installer [here](https://www.xilinx.com/support/download.html) before continue to next step
+#### Step 1:
+##### Setting permision Execute: Allow executing file as program (Another way: Properties of file -> Permissions -> Tick "Allow executing file as program")
+```
+chmod +x Xilinx_Unified_2020.2_1118_1232_Lin64.bin
+```
+##### Run file to setup
+```
+./Xilinx_Unified_2020.2_1118_1232_Lin64.bin
+```
+#### Step 2: Install Library
+```
+sudo apt install libtinfo5
+```
+#### Step 3: Settings to open Vivado
+##### Open .profile
+```
+nano .profile
+```
+##### Add this line to the end of .profile then press Ctrl + X and then Y
+```
+source /tools/Xilinx/Vivado/2020.2/settings64.sh
+```
+##### Restart
+#### Step 4: Open Vivado
+```
+vivado
+```
 # 2. Color conversion algorithms
 ## RGB -> GRAY
 ### [Algorithm](https://docs.opencv.org/4.5.1/de/d25/imgproc_color_conversions.html)
