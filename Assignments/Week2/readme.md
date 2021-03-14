@@ -84,7 +84,6 @@ resized = cv.resize(img, dim, interpolation = cv.INTER_AREA)
 cv.imshow("Resized image", resized)
 
 # grayscale image
-# RGB[A] to Gray: Y ← 0.299⋅R + 0.587⋅G + 0.114⋅B
 grayscaled = cv.cvtColor(resized, cv.COLOR_BGR2GRAY)
 cv.imshow("Grayscaled image", grayscaled)
 
