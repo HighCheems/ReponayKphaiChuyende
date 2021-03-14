@@ -167,6 +167,86 @@ cv.waitKey(0)
 
 cv.destroyAllWindows()
 ```
-# 4. Verilog implementation
+# 4. Verilog implementation (size: 200x200)
+## ALU to Calculate Gray value (basic design, not optimize)
+```
+module ALU_RGB2GRAY(GRAY,R,G,B);
+input wire [31:0] R,G,B;
+output wire [31:0] GRAY;
 
+wire [31:0] OR,OG,OB;
+
+Multiplication M_R(.a_operand(R),.b_operand(32'h3e991687),.Exception(),.Overflow(),.Underflow(),.result(OR));
+Multiplication M_G(.a_operand(G),.b_operand(32'h3f1645a2),.Exception(),.Overflow(),.Underflow(),.result(OG));
+Multiplication M_B(.a_operand(B),.b_operand(32'h3de978d5),.Exception(),.Overflow(),.Underflow(),.result(OB));
+
+wire [31:0] A1;
+Addition_Subtraction S1(.a_operand(OR),.b_operand(OG),.AddBar_Sub(1'd0),.Exception(),.result(A1));
+Addition_Subtraction S2(.a_operand(A1),.b_operand(OB),.AddBar_Sub(1'd0),.Exception(),.result(GRAY));
+endmodule
+```
+## Main module (basic design, not optimize)
+```
+module RGB2GRAY(R,G,B,GRAY,CLK,WE);
+
+input wire [31:0] R,G,B;
+output wire [31:0] GRAY;
+input wire CLK,WE;
+
+wire [31:0] OR,OG,OB;
+
+REG_32BIT M_R(.Dout(OR),.Din(R),.CLK(CLK),.WE(WE));
+REG_32BIT M_G(.Dout(OG),.Din(G),.CLK(CLK),.WE(WE));
+REG_32BIT M_B(.Dout(OB),.Din(B),.CLK(CLK),.WE(WE));
+
+ALU_RGB2GRAY ALU(.GRAY(GRAY),.R(OR),.G(OG),.B(OB));
+
+endmodule
+```
+## Testbench (size: 200x200). Output file: Out_GRAY.txt, line by line
+```
+`timescale 1ns/1ps
+module testbench();
+reg [31:0] R,G,B;
+wire [31:0] GRAY;
+reg WE,CLK;
+
+RGB2GRAY md(.R(R),.G(G),.B(B),.GRAY(GRAY),.CLK(CLK),.WE(WE));
+
+always #1 CLK = ~CLK;
+
+integer inR,inG,inB,outGray,i;
+initial begin
+	inR=$fopen("R_ieee754.txt","r");
+	inG=$fopen("G_ieee754.txt","r");
+	inB=$fopen("B_ieee754.txt","r");
+	outGray=$fopen("Out_GRAY.txt","w");
+
+	WE=1'd0;
+	CLK=1'd0;
+
+	fork begin
+		#0.5;
+		WE=1'd1;
+	end join
+
+	for(i=0; i<= 40000; i=i+1) begin
+		$fscanf(inR, "%b\n", R);
+		$fscanf(inG, "%b\n", G);
+		$fscanf(inB, "%b\n", B);
+		#2;
+		if(i==40000) begin $finish; end
+	end
+
+$fclose(inR);
+$fclose(inG);
+$fclose(inB);
+end
+
+always @(posedge CLK) begin
+	if(GRAY != 8'hxxxxxxxx) $fwrite(outGray,"%b\n", GRAY);
+end
+
+endmodule
+```
 # 5. Comparation
