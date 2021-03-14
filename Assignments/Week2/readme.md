@@ -169,7 +169,7 @@ cv.destroyAllWindows()
 ```
 # 4. Verilog implementation (size: 200x200)
 ## ALU to Calculate Gray value (basic design, not optimize)
-```
+```verilog
 module ALU_RGB2GRAY(GRAY,R,G,B);
 input wire [31:0] R,G,B;
 output wire [31:0] GRAY;
@@ -186,7 +186,7 @@ Addition_Subtraction S2(.a_operand(A1),.b_operand(OB),.AddBar_Sub(1'd0),.Excepti
 endmodule
 ```
 ## Main module (basic design, not optimize)
-```
+```verilog
 module RGB2GRAY(R,G,B,GRAY,CLK,WE);
 
 input wire [31:0] R,G,B;
@@ -204,7 +204,7 @@ ALU_RGB2GRAY ALU(.GRAY(GRAY),.R(OR),.G(OG),.B(OB));
 endmodule
 ```
 ## Testbench (size: 200x200). Output file: Out_GRAY.txt, line by line
-```
+```verilog
 `timescale 1ns/1ps
 module testbench();
 reg [31:0] R,G,B;
