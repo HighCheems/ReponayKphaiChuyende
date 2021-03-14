@@ -66,10 +66,6 @@ vivado
 ### [Algorithm](https://docs.opencv.org/4.5.1/de/d25/imgproc_color_conversions.html)
 #### RGB[A] to Gray: Y <- 0.299 ⋅ R + 0.587 ⋅ G + 0.114 ⋅ B
 ```python
-cvtColor(src, bwsrc, cv::COLOR_RGB2GRAY);
-```
-# 3. Python implementation
-```python
 from cv2 import cv2 as cv
 
 # please change your image path
@@ -89,9 +85,84 @@ cv.imshow("Resized image", resized)
 
 # grayscale image
 # RGB[A] to Gray: Y ← 0.299⋅R + 0.587⋅G + 0.114⋅B
-grayscaled = cv.cvtColor(resized, cv.COLOR_RGB2GRAY)
+grayscaled = cv.cvtColor(resized, cv.COLOR_BGR2GRAY)
 cv.imshow("Grayscaled image", grayscaled)
 
+# press any keys, dont press Close(X)
+cv.waitKey(0)
+
+cv.destroyAllWindows()
+```
+# 3. Python implementation
+## Get R G B value in decimal
+```python
+from cv2 import cv2 as cv
+import numpy as np
+
+img = cv.imread('/home/cheems/Pictures/cheems_supersmol.jpg')
+
+# opencv reads the images as BGR instead of RGB
+b,g,r = cv.split(img)
+
+with open('/home/cheems/Documents/R.txt', 'w') as RED:
+    for _ in r:
+        np.savetxt(RED,_,fmt='%d')
+with open('/home/cheems/Documents/G.txt', 'w') as GREEN:
+    for _ in g:
+        np.savetxt(GREEN,_,fmt='%d')
+with open('/home/cheems/Documents/B.txt', 'w') as BLUE:
+    for _ in b:
+        np.savetxt(BLUE,_,fmt='%d')
+RED.close()
+GREEN.close()
+BLUE.close()
+```
+## Get Gray value in decimal
+```python
+from cv2 import cv2 as cv
+import numpy as np
+
+img = cv.imread('/home/cheems/Pictures/cheems_supersmol.jpg')
+
+# grayscale image
+
+grayscaled = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+#cv.imshow("Grayscaled image", grayscaled)
+
+""" l = cv.split(grayscaled)
+#print(l)
+with open('/home/cheems/Documents/GrayCV.txt', 'w') as GrayCV:
+    for _ in l:
+        np.savetxt(GrayCV,_,fmt='\n%d') """
+
+RED = open('/home/cheems/Documents/R.txt', 'r')
+GREEN = open('/home/cheems/Documents/G.txt', 'r')
+BLUE = open('/home/cheems/Documents/B.txt', 'r')
+GRAY = open('/home/cheems/Documents/Gray.txt', 'w')
+
+count_R = open('/home/cheems/Documents/R.txt', 'r') 
+Counter = 0
+  
+# Reading from file 
+Content = count_R.read() 
+CoList = Content.split("\n") 
+  
+for i in CoList: 
+    if i: 
+        Counter += 1
+
+#print(Counter)
+# RGB[A] to Gray: Y ← 0.299⋅R + 0.587⋅G + 0.114⋅B
+for _ in range(Counter):
+    GrayScale = int(float(RED.readline())*0.299 + float(GREEN.readline())*0.587 + float(BLUE.readline())*0.114)
+    #print(GrayScale)
+    GRAY.write(str(GrayScale))
+    GRAY.write('\n')
+
+RED.close()
+GREEN.close()
+BLUE.close()
+GRAY.close()
 # press any keys, dont press Close(X)
 cv.waitKey(0)
 
