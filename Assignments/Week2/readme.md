@@ -225,10 +225,10 @@ initial begin
 	WE=1'd0;
 	CLK=1'd0;
 
-	fork begin
+	fork
 		#0.5;
 		WE=1'd1;
-	end join
+	join
 
 	for(i=0; i<= 40000; i=i+1) begin
 		$fscanf(inR, "%b\n", R);
