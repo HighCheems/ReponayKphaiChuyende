@@ -167,6 +167,22 @@ cv.waitKey(0)
 
 cv.destroyAllWindows()
 ```
+## Create image from file txt with float value
+```python
+from cv2 import cv2
+import numpy
+
+img=numpy.zeros((200,200),dtype=float)
+with open('Out_GRAY_dec.txt', 'r') as ifile:
+    for i in range(200):
+        for j in range(200):
+            f_line= ifile.readline()
+            img[i][j] = float(f_line)/255
+
+cv2.imshow('Picture',img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
 # 4. Verilog implementation (size: 200x200)
 ## ALU to Calculate Gray value (basic design, not optimize)
 ```Verilog
