@@ -266,3 +266,5 @@ end
 endmodule
 ```
 # 5. Comparation
+## Demo result: verilog convert(Left) and openCV convert(Right)
+![Demo][Demo.png]
