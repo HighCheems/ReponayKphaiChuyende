@@ -6,11 +6,11 @@
 #### Step 1: Install ModelSim: Go to the folder have 2 parts of ModelSim (if they do not in the default folder). 
 ##### Setting permision Execute: Allow executing file as program (Another way: Properties of file -> Permissions -> Tick "Allow executing file as program")
 ```
-chmod +x ModelSimProSetup-20.4.0.72-linux
+chmod +x ModelSimProSetup-20.4.0.72-linux.run
 ```
 ##### Run file to setup
 ```
-./ModelSimProSetup-20.4.0.72-linux
+./ModelSimProSetup-20.4.0.72-linux.run
 ```
 #### Step 2: Install library for ModelSim
 ```
