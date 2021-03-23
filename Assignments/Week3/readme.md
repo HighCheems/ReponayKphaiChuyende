@@ -10,4 +10,5 @@ Time: 5 seconds
 ## Step 3: Read Gray and Gray_RTL, compare and show them frame by frame
 
 # Result Demo
-
+![image](Sources/one_frame_demo_0.png)
+![image](Sources/one_frame_demo_1.png)
