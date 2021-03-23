@@ -57,7 +57,9 @@ def CalculateGrayAndSplit():
     vid.release()
     cv.destroyAllWindows()
 ```
-# Compare Result: Python and RTL. CompareResult.txt file is write the error between Py and RTL. Report file will show the AVG.txt - Max - Min value by frame
+# Compare Result: Python and RTL. 
+## CompareResult.txt file is write the error between Py and RTL. 
+### Report file will show the AVG.txt - Max - Min value by frame
 ```python
 def ShowAndCompare():
     frames=52 #Total 52 frames - frame 0 to frame 51
