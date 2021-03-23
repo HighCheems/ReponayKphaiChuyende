@@ -6,7 +6,9 @@ def CalculateGray(r,g,b):
     return g
 ```
 # Module Split RGB, Gray to file (We have some troubles with Modelsim, so we put all files in RTL folder)
-## This module will write one by one frame into R,G,B,Gray txt files. File name: "red_<frame number>.txt"
+## This module will write one by one frame into R,G,B,Gray txt files. File name: "red_frame-number.txt". 
+### R,G,B format binary (floating point 32 bit).
+### Gray format float number.
 ```python
 def Split_RGB_GRAY(r,g,b,gray,count,width,height):
     red_file= "video/RTL/red_" + str(count) + ".txt"
