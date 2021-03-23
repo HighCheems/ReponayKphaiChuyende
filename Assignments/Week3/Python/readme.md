@@ -33,3 +33,27 @@ def Split_RGB_GRAY(r,g,b,gray,count,width,height):
     BLUE.close()
     GRAY_F.close()
 ```
+# We open the video and begin to split it
+```python
+def CalculateGrayAndSplit():
+    vid = cv.VideoCapture('video/cheemssssssss.mp4')
+    width = 200
+    height = 200
+
+    count=0
+    while(True):
+        ret,frame = vid.read()
+        if ret == True:
+            cv.imshow('cheems',frame)
+            b,g,r=cv.split(frame)
+            gray=CalculateGray(r,g,b) #Call the module CalculateGray
+            Split_RGB_GRAY(r,g,b,gray,count,width,height) #Call the module Split_RGB_Gray
+            count=count+1
+            if cv.waitKey(100) & 0xFF==ord('q'):
+                break
+        else:
+            break
+
+    vid.release()
+    cv.destroyAllWindows()
+```
