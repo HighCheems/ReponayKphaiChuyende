@@ -1,0 +1,35 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/Addition.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Addition
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/Addition_Subtraction.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Addition_Subtraction
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/Control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Controller
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'CLK' is not allowed [/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/Control.v:35]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'stage0' is not allowed [/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/Control.v:36]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/Datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Datapath
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'Gray' is not allowed [/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/Datapath.v:87]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/Multiplication.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Multiplication
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/RGB_to_Gray.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RGB_to_Gray
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'CLK' is not allowed [/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/RGB_to_Gray.v:34]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'R' is not allowed [/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/RGB_to_Gray.v:35]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/fp_to_int.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fp_to_int
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'fp' is not allowed [/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/fp_to_int.v:28]
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'int' is not allowed [/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/fp_to_int.v:29]
+WARNING: [VRFC 10-8370] keyword 'unsigned' is not allowed here in this mode of Verilog [/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/fp_to_int.v:29]
+WARNING: [VRFC 10-8370] keyword 'unsigned' is not allowed here in this mode of Verilog [/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/fp_to_int.v:30]
+WARNING: [VRFC 10-8370] keyword 'unsigned' is not allowed here in this mode of Verilog [/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/fp_to_int.v:31]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/int_to_fp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module int_to_fp
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/priority_encoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module priority_encoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sim_1/new/RGB_to_Gray_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RGB_to_Gray_tb
+ERROR: [VRFC 10-3734] system call 'sformatf' not allowed in this dialect. Use SystemVerilog mode [/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sim_1/new/RGB_to_Gray_tb.v:66]
+ERROR: [VRFC 10-3734] system call 'sformatf' not allowed in this dialect. Use SystemVerilog mode [/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sim_1/new/RGB_to_Gray_tb.v:67]
+ERROR: [VRFC 10-3734] system call 'sformatf' not allowed in this dialect. Use SystemVerilog mode [/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sim_1/new/RGB_to_Gray_tb.v:68]
+ERROR: [VRFC 10-3734] system call 'sformatf' not allowed in this dialect. Use SystemVerilog mode [/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sim_1/new/RGB_to_Gray_tb.v:69]
+ERROR: [VRFC 10-2865] module 'RGB_to_Gray_tb' ignored due to previous errors [/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sim_1/new/RGB_to_Gray_tb.v:23]

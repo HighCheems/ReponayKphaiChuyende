@@ -58,9 +58,9 @@ module Datapath(
     wire [31:0] R_mul, G_mul, B_mul;
     reg [31:0] R_mul_reg, G_mul_reg, B_mul_reg;
     
-    Multiplication getR_mul(.a_operand(R_fp_reg),.b_operand(8'h3e991687),.result(R_mul)); //*0.289
-    Multiplication getG_mul(.a_operand(G_fp_reg),.b_operand(8'h3f1645a2),.result(G_mul)); //*0.587
-    Multiplication getB_mul(.a_operand(B_fp_reg),.b_operand(8'h3de978d5),.result(B_mul)); //*0.114
+    Multiplication getR_mul(.a_operand(R_fp_reg),.b_operand(32'h3e991687),.result(R_mul)); //*0.289
+    Multiplication getG_mul(.a_operand(G_fp_reg),.b_operand(32'h3f1645a2),.result(G_mul)); //*0.587
+    Multiplication getB_mul(.a_operand(B_fp_reg),.b_operand(32'h3de978d5),.result(B_mul)); //*0.114
     
     always @(posedge CLK) begin
         if (stage2) begin
