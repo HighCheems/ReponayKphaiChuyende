@@ -9,6 +9,8 @@ verilog xil_defaultlib  \
 "../../../../RGB_to_Gray.srcs/sources_1/new/fp_to_int.v" \
 "../../../../RGB_to_Gray.srcs/sources_1/new/int_to_fp.v" \
 "../../../../RGB_to_Gray.srcs/sources_1/new/priority_encoder.v" \
+
+sv xil_defaultlib  \
 "../../../../RGB_to_Gray.srcs/sim_1/new/RGB_to_Gray_tb.v" \
 
 # compile glbl module

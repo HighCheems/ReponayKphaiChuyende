@@ -42,66 +42,47 @@ parameter oneframe=40000,frames=52;
 always #10 CLK<=~CLK;
 
 // variables
-integer i,j,count;
+integer numb,i,count;
 integer outGray,f_R,f_G,f_B;
 reg [7:0] inR [0:oneframe];
 reg [7:0] inG [0:oneframe];
 reg [7:0] inB [0:oneframe];
+
 // do
     initial begin
     CLK=1'd0;
     In_Valid=1'd0;
-    i=0;
-    fork 
-    #5 In_Valid=1'd1;   
-    #55 In_Valid=1'd0;
-    #200 $finish;
+    i=0; 
+    numb=0;
+	outGray=$fopen($sformatf("/home/baotran/Documents/week4/Gray_RTL_%0d.txt",numb),"w");
+	f_R=$fopen($sformatf("/home/baotran/Documents/week4/red_%0d.txt",numb),"r");
+	//$readmemb($sformatf("green_%0d.txt",numb),inG)
+	f_G=$fopen($sformatf("/home/baotran/Documents/week4/green_%0d.txt",numb),"r");
+	//$readmemb($sformatf("blue_%0d.txt",numb),inB);
+	f_B=$fopen($sformatf("/home/baotran/Documents/week4/blue_%0d.txt",numb),"r");
+    fork
+	#5 In_Valid=1'd1;
+	begin
+	#10000 In_Valid=1'd0;
+	end
     join
-    
-    
-    /*f_R=$fopen("/home/baotran/Documents/week2/video/new_test/red.txt","r");
-    f_G=$fopen("/home/baotran/Documents/week2/video/new_test/green.txt","r");
-    f_B=$fopen("/home/baotran/Documents/week2/video/new_test/blue.txt","r");    */
-    for(count=0; count<=frames-1;count=count+1) begin
-    $readmemb($sformatf("/home/baotran/Documents/week2/video/new_test/red_%0d.txt",count),inR);
-    $readmemb($sformatf("/home/baotran/Documents/week2/video/new_test/green_%0d.txt",count),inG);
-    $readmemb($sformatf("/home/baotran/Documents/week2/video/new_test/blue_%0d.txt",count),inB);   
-    outGray=$fopen($sformatf("/home/baotran/Documents/week2/video/new_test/Gray_RTL_%0d.txt",count),"w");
-    
-    while(i<=oneframe) begin  
-        if(In_Valid==1'd1) begin
-            R=inR[i];
-            G=inG[i];
-            B=inB[i];
-            #10;
-            i=i+1;
-        end
-    end
-    
-    $fclose(inR);
-    $fclose(inG);
-    $fclose(inB);
-    $fclose(outGray);
-    if(count==frames-1) begin
-        $finish;
-        end
-    end
-end        
-/*    while(In_Valid==1'd1) begin
-            R=$fscanf(f_R,"%b\n");
-            G=$fscanf(f_G,"%b\n");
-            B=$fscanf(f_B,"%b\n");
-            #10; 
-    end
-    $fclose(f_R);
-    $fclose(f_G);
-    $fclose(f_B);
-    $fclose(outGray);  */    
+
+        //G=inG[i];
+        //B=inB[i];
+    	#20000 $finish;
+	end
+
+
 
 always @(posedge CLK) begin
-         if(Out_Valid==1'd1) begin
-              $fdisplay(outGray,"%b",Gray);
-         end
+	if(Out_Valid && Gray>=8'd0 && Gray <=8'd255) begin
+	$fwrite(outGray,"%b\n",Gray);
+	end
+	if(In_Valid) begin
+	$fscanf(f_R,"%b\n",R);
+	$fscanf(f_G,"%b\n",G);
+	$fscanf(f_B,"%b\n",B);
+	end
 end
 
 endmodule
