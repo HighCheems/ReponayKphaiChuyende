@@ -23,19 +23,28 @@
 module Datapath(
     input [7:0] R, G, B,
     input CLK,
-    input stage1, stage2, stage3,
+    input stage0, stage1, stage2, stage3, stage4,
     output [7:0] Gray
     );
     
+    //Stage 0
+    reg [7:0] R_reg,G_reg,B_reg;
     
+    always @(posedge CLK) begin
+        if(stage0) begin
+            R_reg<=R;
+            G_reg<=G;
+            B_reg<=B;
+        end
+    end
     
     //Stage 1
     wire [31:0] R_fp, G_fp, B_fp;
     reg [31:0] R_fp_reg, G_fp_reg, B_fp_reg;
     
-    int_to_fp getR_fp(.int(R),.fp(R_fp));
-    int_to_fp getG_fp(.int(G),.fp(G_fp));
-    int_to_fp getB_fp(.int(B),.fp(B_fp));
+    int_to_fp getR_fp(.int(R_reg),.fp(R_fp));
+    int_to_fp getG_fp(.int(G_reg),.fp(G_fp));
+    int_to_fp getB_fp(.int(B_reg),.fp(B_fp));
     
     always @(posedge CLK) begin
         if (stage1) begin
@@ -72,4 +81,17 @@ module Datapath(
             Sum_reg <= Sum;
         end
     end
+    
+    //Stage 4
+    wire [7:0] Int_Gray;
+    reg [7:0] Gray;
+    fp_to_int getInt(.fp(Sum_reg),.int(Int_Gray));
+    
+    always @(posedge CLK) begin
+        if (stage4) begin
+            Gray <= Int_Gray;
+        end
+    end
+    
+    
 endmodule
