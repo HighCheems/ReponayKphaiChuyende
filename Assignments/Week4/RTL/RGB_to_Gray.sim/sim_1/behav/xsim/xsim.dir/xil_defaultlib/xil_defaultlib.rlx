@@ -3,7 +3,7 @@
 Nov 18 2020
 09:20:35
 /home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.sim/sim_1/behav/xsim/glbl.v,1616665963,verilog,,,,glbl,,uvm,,,,,,
-/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sim_1/new/RGB_to_Gray_tb.v,1616771177,systemVerilog,,,,RGB_to_Gray_tb,,uvm,,,,,,
+/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sim_1/new/RGB_to_Gray_tb.v,1616833310,systemVerilog,,,,RGB_to_Gray_tb,,uvm,,,,,,
 /home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sim_1/new/fp_to_int_tb.v,1616673762,verilog,,,,fp_to_int_tb,,,,,,,,
 /home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/Addition.v,1616665964,verilog,,/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/Addition_Subtraction.v,,Addition,,uvm,,,,,,
 /home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/Addition_Subtraction.v,1616665964,verilog,,/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sources_1/new/Control.v,,Addition_Subtraction,,uvm,,,,,,

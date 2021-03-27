@@ -18,8 +18,8 @@ Compiling module xil_defaultlib.Datapath
 Compiling module xil_defaultlib.Controller
 Compiling module xil_defaultlib.RGB_to_Gray
 Compiling module xil_defaultlib.RGB_to_Gray_tb
-WARNING: [XSIM 43-3373] "/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sim_1/new/RGB_to_Gray_tb.v" Line 82. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sim_1/new/RGB_to_Gray_tb.v" Line 83. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
-WARNING: [XSIM 43-3373] "/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sim_1/new/RGB_to_Gray_tb.v" Line 84. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sim_1/new/RGB_to_Gray_tb.v" Line 96. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sim_1/new/RGB_to_Gray_tb.v" Line 97. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+WARNING: [XSIM 43-3373] "/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/RTL/RGB_to_Gray.srcs/sim_1/new/RGB_to_Gray_tb.v" Line 98. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot RGB_to_Gray_tb_behav
