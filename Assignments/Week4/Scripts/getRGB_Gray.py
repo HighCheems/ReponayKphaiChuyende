@@ -18,10 +18,10 @@ def getRGB_Gray(r,g,b,gray,count,width,height):
 
     for i in range(width):
         for j in range(height):
-            RED.write(str( float(r[i][j]) ) + '\n')
-            GREEN.write(str( float(g[i][j]) ) +'\n')
-            BLUE.write(str( float(b[i][j]) ) +'\n')
-            GRAY.write(str( float(gray[i][j]) ) +'\n')                                    
+            RED.write(str( int(r[i][j]) ) + '\n')
+            GREEN.write(str( int(g[i][j]) ) +'\n')
+            BLUE.write(str( int(b[i][j]) ) +'\n')
+            GRAY.write(str( int(gray[i][j]) ) +'\n')                                    
 
     RED.close()
     GREEN.close()
