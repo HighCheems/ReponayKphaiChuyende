@@ -49,7 +49,7 @@ integer outGray,f_R,f_G,f_B;
 reg [7:0] inG [0:oneframe];
 reg [7:0] inB [0:oneframe];*/
 
-// do
+// --------------------- wave -----------------------------
     initial begin
     CLK=1'd0;
     In_Valid=1'd0;
@@ -77,13 +77,13 @@ reg [7:0] inB [0:oneframe];*/
 
         //G=inG[i];
         //B=inB[i];
-//    	#20000 $finish;
+   	//#20000 $finish;
 	end
-
+// --------------------- write -----------------------------
 always @(numb_write) begin
 	outGray=$fopen($sformatf("/home/baotran/Documents/week4/Gray_RTL_%0d.txt",numb_write),"w");
 end
-
+// --------------------- read ------------------------------
 always @(numb) begin
     if(numb!=frames) begin
 	f_R=$fopen($sformatf("/home/baotran/Documents/week4/red_%0d.txt",numb),"r");
@@ -94,7 +94,7 @@ always @(numb) begin
 	end
 end
 
-
+// --------------------- repeat to finish, frames: 52, pixels of one frame: 200*200=40000 -----------------------------
 always @(posedge CLK) begin
 
 	if(i==oneframe) begin
@@ -127,12 +127,12 @@ always @(posedge CLK) begin
 	$fscanf(f_R,"%b\n",R);
 	$fscanf(f_G,"%b\n",G);
 	$fscanf(f_B,"%b\n",B);
-    i=i+1;
+    	i=i+1;
 	end
 	
 	if(Out_Valid) begin
 	$fwrite(outGray,"%d\n",Gray);
-    j=j+1;
+    	j=j+1;
 	end
 	
 end
