@@ -49,7 +49,7 @@ integer outGray,f_R,f_G,f_B;
 reg [7:0] inG [0:oneframe];
 reg [7:0] inB [0:oneframe];*/
 
-// do
+// --------------------- wave -----------------------------
     initial begin
     CLK=1'd0;
     In_Valid=1'd0;
@@ -78,43 +78,31 @@ reg [7:0] inB [0:oneframe];*/
         //G=inG[i];
         //B=inB[i];
 //    	#20000 $finish;
+   	//#20000 $finish;
+
 	end
-
+// --------------------- write -----------------------------
 always @(numb_write) begin
-	outGray=$fopen($sformatf("/home/baotran/Documents/week4/Gray_RTL_%0d.txt",numb_write),"w");
+    if(numb_write!=frames) begin
+	outGray=$fopen($sformatf("/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/Datasets/Text/frame%0d_Gray_RTL.txt",numb_write),"w");
+    end
 end
-
+// --------------------- read ------------------------------
 always @(numb) begin
     if(numb!=frames) begin
-	f_R=$fopen($sformatf("/home/baotran/Documents/week4/red_%0d.txt",numb),"r");
+	f_R=$fopen($sformatf("/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/Datasets/Text/frame%0d_R.txt",numb),"r");
 	//$readmemb($sformatf("green_%0d.txt",numb),inG)
-	f_G=$fopen($sformatf("/home/baotran/Documents/week4/green_%0d.txt",numb),"r");
+	f_G=$fopen($sformatf("/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/Datasets/Text/frame%0d_G.txt",numb),"r");
 	//$readmemb($sformatf("blue_%0d.txt",numb),inB);
-	f_B=$fopen($sformatf("/home/baotran/Documents/week4/blue_%0d.txt",numb),"r");
+	f_B=$fopen($sformatf("/home/baotran/Desktop/ReponayKphaiChuyende/Assignments/Week4/Datasets/Text/frame%0d_B.txt",numb),"r");
 	end
 end
 
-
+// --------------------- repeat to finish, frames: 52, pixels of one frame: 200*200=40000 -----------------------------
 always @(posedge CLK) begin
-
-	if(i==oneframe) begin
-	numb=numb+1;
-	i=0;
-	end 
-	
-	if(j==oneframe) begin
-	numb_write=numb_write+1;
-	j=0;
-	end
 
 	if(numb_write==frames) begin
 	$finish;
-	end
-	
-	if(numb==frames) begin 
-	   In_Valid<=1'd0;
-	   get_in<=1'd0;
-	   i=0;
 	end
 	
 	if(In_Valid) begin
@@ -123,17 +111,34 @@ always @(posedge CLK) begin
 	 get_in<=1'd0;
 	end
 	
-	if((numb!=frames) && get_in) begin
-	$fscanf(f_R,"%b\n",R);
-	$fscanf(f_G,"%b\n",G);
-	$fscanf(f_B,"%b\n",B);
+	if(get_in) begin
+	$fscanf(f_R,"%d\n",R);
+	$fscanf(f_G,"%d\n",G);
+	$fscanf(f_B,"%d\n",B);
     i=i+1;
 	end
 	
 	if(Out_Valid) begin
 	$fwrite(outGray,"%d\n",Gray);
     j=j+1;
+	end 
+	
+	if(i==oneframe && (numb!=frames)) begin
+    i=0;
+	numb=numb+1;
+	end 
+
+	if(j==oneframe) begin
+	j=0;
+	numb_write=numb_write+1;
+	end	
+	
+	if(numb==frames) begin 
+	   In_Valid<=1'd0;
+	   get_in<=1'd0;
+	   i=0;
 	end
+	
 	
 end
 

@@ -6,10 +6,10 @@ def getGray(r,g,b):
     return g
 
 def getRGB_Gray(r,g,b,gray,count,width,height):
-    getR = 'Text/frame' + str(count) + '_R.txt'
-    getG = 'Text/frame' + str(count) + '_G.txt'
-    getB = 'Text/frame' + str(count) + '_B.txt'
-    getGray = 'Text/frame' + str(count) + '_Gray.txt'
+    getR = 'Datasets/Text/frame' + str(count) + '_R.txt'
+    getG = 'Datasets/Text/frame' + str(count) + '_G.txt'
+    getB = 'Datasets/Text/frame' + str(count) + '_B.txt'
+    getGray = 'Datasets/Text/frame' + str(count) + '_Gray.txt'
 
     RED = open(getR, "w")
     GREEN = open(getG, "w")
@@ -18,10 +18,10 @@ def getRGB_Gray(r,g,b,gray,count,width,height):
 
     for i in range(width):
         for j in range(height):
-            RED.write(str( float(r[i][j]) ) + '\n')
-            GREEN.write(str( float(g[i][j]) ) +'\n')
-            BLUE.write(str( float(b[i][j]) ) +'\n')
-            GRAY.write(str( float(gray[i][j]) ) +'\n')                                    
+            RED.write(str( int(r[i][j]) ) + '\n')
+            GREEN.write(str( int(g[i][j]) ) +'\n')
+            BLUE.write(str( int(b[i][j]) ) +'\n')
+            GRAY.write(str( (gray[i][j]) ) +'\n')                                    
 
     RED.close()
     GREEN.close()
@@ -29,7 +29,7 @@ def getRGB_Gray(r,g,b,gray,count,width,height):
     GRAY.close()
 
 
-vid_in = cv.VideoCapture('Videos/cheems.mp4')
+vid_in = cv.VideoCapture('Datasets/Videos/cheems.mp4')
 
 count = 0
 width = 200
