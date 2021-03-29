@@ -45,7 +45,7 @@ for i in range(frames):
             all=all+err
             count_line=count_line+1
     # ------------------ write to file ---------------------
-    R.write("Sai so trung binh cua frame " + str(i) +": " + str(all/count_line) + " - Max: " + str(max) + " - Min: " + str(min) +"\n")
+    R.write("[Frame " + str(i) +"]\t\tAvg: " + str(all/count_line) + "\t\tMax: " + str(max) + "\t\tMin: " + str(min) +"\n")
     vid_gray_frame.close()
     vid_gray_RTL_frame.close()
     CR.close()
@@ -53,7 +53,7 @@ for i in range(frames):
     cv.imshow("vid_python",vid)
     cv.imshow("vid_RTL",vid_RTL)
     # ------------------ press q to exit -------------------
-    if cv.waitKey(100) & 0xFF == ord('q'):
+    if cv.waitKey(10) & 0xFF == ord('q'):
         break
 #  ------------------ done ---------------------
 print("done !")
