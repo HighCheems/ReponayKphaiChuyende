@@ -21,12 +21,7 @@ def getRGB_Gray(r,g,b,gray,count,width,height):
             RED.write(str( int(r[i][j]) ) + '\n')
             GREEN.write(str( int(g[i][j]) ) +'\n')
             BLUE.write(str( int(b[i][j]) ) +'\n')
-<<<<<<< HEAD
-            GRAY.write(str( int(gray[i][j]) ) +'\n')                                    
-=======
             GRAY.write(str( (gray[i][j]) ) +'\n')                                    
->>>>>>> 90c98fa4d16b02594253459e9643e0a9dcea735e
-
     RED.close()
     GREEN.close()
     BLUE.close()
