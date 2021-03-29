@@ -87,27 +87,36 @@ reg stage0, stage1, stage2, stage3, stage4, Out_Valid;
          end      
     end
 //Stage3
-    reg s3_stage4, s3_OutValid;
+    reg s3_stage4,s3_OutValid;
     always @(posedge CLK) begin 
         if(s2_stage3==1'd1) begin
-            stage3      <=1'd1;
-            s3_stage4   <=s2_stage4;
-            s3_OutValid <=s2_OutValid;
+            stage3          <=1'd1;
+            s3_stage4       <=s2_stage4;
+            s3_OutValid     <=s2_OutValid;
         end else begin
-            stage3      <=1'd0;
-            s3_stage4   <=1'd0;
-            s3_OutValid <=1'd0;
+            stage3          <=1'd0;
+            s3_stage4       <=1'd0;
+            s3_OutValid     <=1'd0;
          end      
     end
 //Stage4
+        reg s4_OutValid;
         always @(posedge CLK) begin
         if(s3_stage4==1'd1) begin
-            stage4      <=1'd1;
-            Out_Valid   <=s3_OutValid;
+            stage4          <=1'd1;
+            s4_OutValid     <=s3_OutValid;
         end else begin
-            stage4      <=1'd0;
-            Out_Valid   <=1'd0;
+            stage4          <=1'd0;
+            s4_OutValid     <=1'd0;
         end
-    end  
-    
+    end 
+//Stage 5
+        always @(posedge CLK) begin
+        if(s4_OutValid==1'd1) begin
+            Out_Valid       <=s4_OutValid;
+        end else begin
+            Out_Valid       <=1'd0;
+        end
+    end        
+        
 endmodule
