@@ -42,7 +42,8 @@ parameter oneframe=40000,frames=52;
 always #10 CLK<=~CLK;
 
 // variables
-integer numb,i;
+integer numb,i,numb_write,j;
+reg get_in;
 integer outGray,f_R,f_G,f_B;
 /*reg [7:0] inR [0:oneframe];
 reg [7:0] inG [0:oneframe];
@@ -53,7 +54,9 @@ reg [7:0] inB [0:oneframe];*/
     CLK=1'd0;
     In_Valid=1'd0;
     i=0; 
+    j=0;
     numb=0;
+    numb_write=0;
 	/*outGray=$fopen($sformatf("/home/baotran/Documents/week4/Gray_RTL_%0d.txt",numb),"w");
 	f_R=$fopen($sformatf("/home/baotran/Documents/week4/red_%0d.txt",numb),"r");
 	//$readmemb($sformatf("green_%0d.txt",numb),inG)
@@ -61,8 +64,8 @@ reg [7:0] inB [0:oneframe];*/
 	//$readmemb($sformatf("blue_%0d.txt",numb),inB);
 	f_B=$fopen($sformatf("/home/baotran/Documents/week4/blue_%0d.txt",numb),"r");*/
     fork
-	#5 In_Valid=1'd1;
-	begin
+    #5 In_Valid=1'd1;
+    begin
 	#10000 In_Valid=1'd0;
 	end
 	#10050 In_Valid=1'd1;
@@ -77,34 +80,61 @@ reg [7:0] inB [0:oneframe];*/
 //    	#20000 $finish;
 	end
 
+always @(numb_write) begin
+	outGray=$fopen($sformatf("/home/baotran/Documents/week4/Gray_RTL_%0d.txt",numb_write),"w");
+end
+
 always @(numb) begin
-	outGray=$fopen($sformatf("/home/baotran/Documents/week4/Gray_RTL_%0d.txt",numb),"w");
+    if(numb!=frames) begin
 	f_R=$fopen($sformatf("/home/baotran/Documents/week4/red_%0d.txt",numb),"r");
 	//$readmemb($sformatf("green_%0d.txt",numb),inG)
 	f_G=$fopen($sformatf("/home/baotran/Documents/week4/green_%0d.txt",numb),"r");
 	//$readmemb($sformatf("blue_%0d.txt",numb),inB);
 	f_B=$fopen($sformatf("/home/baotran/Documents/week4/blue_%0d.txt",numb),"r");
-
+	end
 end
 
 
 always @(posedge CLK) begin
-	if(Out_Valid && Gray>=8'd0 && Gray <=8'd255) begin
-	$fwrite(outGray,"%b\n",Gray);
-	end
-	if(In_Valid) begin
-	$fscanf(f_R,"%b\n",R);
-	$fscanf(f_G,"%b\n",G);
-	$fscanf(f_B,"%b\n",B);
-	i=i+1;
-	end
+
 	if(i==oneframe) begin
 	numb=numb+1;
 	i=0;
+	end 
+	
+	if(j==oneframe) begin
+	numb_write=numb_write+1;
+	j=0;
 	end
-	if(numb==frames) begin
+
+	if(numb_write==frames) begin
 	$finish;
 	end
+	
+	if(numb==frames) begin 
+	   In_Valid<=1'd0;
+	   get_in<=1'd0;
+	   i=0;
+	end
+	
+	if(In_Valid) begin
+	 get_in<=1'd1;
+	end else begin
+	 get_in<=1'd0;
+	end
+	
+	if((numb!=frames) && get_in) begin
+	$fscanf(f_R,"%b\n",R);
+	$fscanf(f_G,"%b\n",G);
+	$fscanf(f_B,"%b\n",B);
+    i=i+1;
+	end
+	
+	if(Out_Valid) begin
+	$fwrite(outGray,"%d\n",Gray);
+    j=j+1;
+	end
+	
 end
 
 endmodule
