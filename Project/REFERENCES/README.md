@@ -5,4 +5,4 @@
 # Published in:
 ##### 2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR).
 # PDF file:
-##### :point_right: 1409.4842.pdf
+##### [pdf_file](REFERENCES/1409.4842.pdf)
