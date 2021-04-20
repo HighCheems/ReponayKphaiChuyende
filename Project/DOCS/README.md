@@ -9,7 +9,7 @@ Tầng tích chập (CONV) sử dụng các bộ lọc để thực hiện phép
 ## Tầng Pooling (POOL)
 Tầng pooling (POOL) là một phép downsampling, thường được sử dụng sau tầng tích chập, giúp tăng tính bất biến không gian. Cụ thể, max pooling và average pooling là những dạng pooling đặc biệt, mà tương ứng là trong đó giá trị lớn nhất và giá trị trung bình được lấy ra.
 | Kiểu      | Max pooling          | Average pooling  |
-| ----------|:--------------------:| ----------------:|
+| ----------|--------------------| ----------------|
 | Chức năng | Từng phép pooling chọn giá trị lớn nhất trong khu vực mà nó đang được áp dụng | Từng phép pooling tính trung bình các giá trị trong khu vực mà nó đang được áp dụng |
 | Minh họa  | ![gif](https://stanford.edu/~shervine/teaching/cs-230/illustrations/max-pooling-a.png?711b14799d07f9306864695e2713ae07) | ![gif](https://stanford.edu/~shervine/teaching/cs-230/illustrations/average-pooling-a.png?58f9ab6d61248c3ec8d526ef65763d2f) |
 | Nhận xét  | Bảo toàn các đặc trưng đã phát hiện; Được sử dụng thường xuyên | Giảm kích thước feature map; Được sử dụng trong mạng LeNet |
