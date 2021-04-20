@@ -16,3 +16,8 @@ Tầng pooling (POOL) là một phép downsampling, thường được sử dụ
 ## Tầng Fully Connected (FC)
 Tầng kết nối đầy đủ (FC) nhận đầu vào là các dữ liệu đã được làm phẳng, mà mỗi đầu vào đó được kết nối đến tất cả neuron. Trong mô hình mạng CNNs, các tầng kết nối đầy đủ thường được tìm thấy ở cuối mạng và được dùng để tối ưu hóa mục tiêu của mạng ví dụ như độ chính xác của lớp.
 ![img](https://stanford.edu/~shervine/teaching/cs-230/illustrations/fully-connected-ltr.png?32caf9e07c79d652faa292812579d063)
+
+## Một số hàm thường gặp
+Rectified Linear UnitTầng rectified linear unit (ReLU) là một hàm kích hoạt gg được sử dụng trên tất cả các thành phần. Mục đích của nó là tăng tính phi tuyến tính cho mạng. Những biến thể khác của ReLU được tổng hợp ở bảng dưới:
+| ReLU          |Leaky ReLU                |ELU                          |
+| g(z)=max(0,z) |g(z)=max(ϵz,z) với ϵ≪1   | g(z)=max(α(e^z−1),z)với α≪1 |
