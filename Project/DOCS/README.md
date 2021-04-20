@@ -31,9 +31,7 @@ Tầng kết nối đầy đủ (FC) nhận đầu vào là các dữ liệu đ�
 # Inception v1 Architecture
 Vào năm 2014, các nhà nghiên cứu của google đã đưa ra mạng Inception -> tham dự cuộc thi ImageNet 2014.
 
-Mạng CNN này bao gồm 27 layers:
-
-![image](https://user-images.githubusercontent.com/66786452/115349423-07c38d80-a1de-11eb-98a5-251142ee60c4.png)
+Mạng CNN này bao gồm 27 layers deep, input 224x224x3, output 1x1x1000
 
 Mô hình này khá đặc biệt, không hoàn toàn là các tầng layer nối tiếp gối đầu lên nhau như các mạng trên. Mạng gồm các đơn vị gọi là “inception cell” (cái này mình nghĩ không nên dịch) - thực hiện convolution 1 input với nhiều filter khác nhau rồi tổng hợp lại, theo nhiều nhánh (branch).
 
