@@ -35,5 +35,5 @@ Tầng kết nối đầy đủ (FC) nhận đầu vào là các dữ liệu đ�
 ![image](https://user-images.githubusercontent.com/79900186/115332344-d2a94200-a1c1-11eb-859d-19655df79594.png)
 
 # Nguồn Tham khảo
-https://stanford.edu/~shervine/l/vi/teaching/cs-230/cheatsheet-convolutional-neural-networks
-https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d#81e0
+- https://stanford.edu/~shervine/l/vi/teaching/cs-230/cheatsheet-convolutional-neural-networks
+- https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d#81e0
