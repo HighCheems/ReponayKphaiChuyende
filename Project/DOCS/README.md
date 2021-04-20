@@ -29,9 +29,9 @@ Tầng kết nối đầy đủ (FC) nhận đầu vào là các dữ liệu đ�
 ##### Áp dụng một hàm mũ tiêu chuẩn cho mỗi phần tử của lớp đầu ra, và sau đó chuẩn hóa các giá trị này bằng cách chia cho tổng của tất cả các cấp số nhân. Làm như vậy đảm bảo tổng của tất cả các giá trị lũy thừa cộng lại bằng 1.
 ![img](softmax.PNG)
 # Inception v1 Architecture
-> Describe
+### Describe
 ![image](https://user-images.githubusercontent.com/79900186/115332540-3cc1e700-a1c2-11eb-9ccd-1e3e6ca124b8.png)
-> Architecture is based on Figure 3 in the paper
+### Architecture is based on Figure 3 in the paper
 ![image](https://user-images.githubusercontent.com/79900186/115332344-d2a94200-a1c1-11eb-859d-19655df79594.png)
 
 # Nguồn Tham khảo
