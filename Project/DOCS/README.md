@@ -19,14 +19,14 @@ Tầng kết nối đầy đủ (FC) nhận đầu vào là các dữ liệu đ�
 
 ## Một số hàm thường gặp
 ### Rectified Linear Unit: 
-###### Tầng rectified linear unit (ReLU) là một hàm kích hoạt g được sử dụng trên tất cả các thành phần. Mục đích của nó là tăng tính phi tuyến tính cho mạng. Những biến thể khác của ReLU được tổng hợp ở bảng dưới:
+##### Tầng rectified linear unit (ReLU) là một hàm kích hoạt g được sử dụng trên tất cả các thành phần. Mục đích của nó là tăng tính phi tuyến tính cho mạng. Những biến thể khác của ReLU được tổng hợp ở bảng dưới:
 |ReLU           |Leaky ReLU                |ELU                         |
 | --------------|------------------------|---------------------------|
 |g(z)=max(0,z)  |g(z)=max(ϵz,z)  với ϵ≪1  |g(z)=max(α(e^z−1),z) với α≪1 |
 |[image](https://user-images.githubusercontent.com/79900186/115330150-b6a3a180-a1bd-11eb-9439-d348e3ad1e37.png)|![image](https://user-images.githubusercontent.com/79900186/115330197-c9b67180-a1bd-11eb-8f23-f81add56e28f.png)|![image](https://user-images.githubusercontent.com/79900186/115330222-d63aca00-a1bd-11eb-975d-660ed41932da.png)| 
 |               | Khắc phục vấn đề ReLU chết cho những giá trị âm | Khả vi tại mọi nơi |
 ### Softmax: 
-###### Áp dụng một hàm mũ tiêu chuẩn cho mỗi phần tử của lớp đầu ra, và sau đó chuẩn hóa các giá trị này bằng cách chia cho tổng của tất cả các cấp số nhân. Làm như vậy đảm bảo tổng của tất cả các giá trị lũy thừa cộng lại bằng 1.
+##### Áp dụng một hàm mũ tiêu chuẩn cho mỗi phần tử của lớp đầu ra, và sau đó chuẩn hóa các giá trị này bằng cách chia cho tổng của tất cả các cấp số nhân. Làm như vậy đảm bảo tổng của tất cả các giá trị lũy thừa cộng lại bằng 1.
 ![img](softmax.PNG)
 # Nguồn Tham khảo
 https://stanford.edu/~shervine/l/vi/teaching/cs-230/cheatsheet-convolutional-neural-networks
