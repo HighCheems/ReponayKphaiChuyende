@@ -29,6 +29,15 @@ Tầng kết nối đầy đủ (FC) nhận đầu vào là các dữ liệu đ�
 ##### Áp dụng một hàm mũ tiêu chuẩn cho mỗi phần tử của lớp đầu ra, và sau đó chuẩn hóa các giá trị này bằng cách chia cho tổng của tất cả các cấp số nhân. Làm như vậy đảm bảo tổng của tất cả các giá trị lũy thừa cộng lại bằng 1.
 ![img](softmax.PNG)
 # Inception v1 Architecture
+Vào năm 2014, các nhà nghiên cứu của google đã đưa ra mạng Inception -> tham dự cuộc thi ImageNet 2014.
+
+Mạng CNN này bao gồm 27 layers:
+
+![image](https://user-images.githubusercontent.com/66786452/115349423-07c38d80-a1de-11eb-98a5-251142ee60c4.png)
+
+Mô hình này khá đặc biệt, không hoàn toàn là các tầng layer nối tiếp gối đầu lên nhau như các mạng trên. Mạng gồm các đơn vị gọi là “inception cell” (cái này mình nghĩ không nên dịch) - thực hiện convolution 1 input với nhiều filter khác nhau rồi tổng hợp lại, theo nhiều nhánh (branch).
+
+Để tiết kiệm tính toán, các convolution kích thước 1x1 được sử dụng để giảm chiều sâu chanel của input (reduce the input channel depth). Với mỗi 1 cell, sử dụng các 1x1, 3x3, 5x5 filter để extract các feature từ input.
 ### Describe
 ![image](https://user-images.githubusercontent.com/79900186/115332540-3cc1e700-a1c2-11eb-9ccd-1e3e6ca124b8.png)
 ### Architecture is based on Figure 3 in the paper
