@@ -33,4 +33,4 @@ Tầng kết nối đầy đủ (FC) nhận đầu vào là các dữ liệu đ�
 
 # Nguồn Tham khảo
 https://stanford.edu/~shervine/l/vi/teaching/cs-230/cheatsheet-convolutional-neural-networks
-
+https://towardsdatascience.com/illustrated-10-cnn-architectures-95d78ace614d#81e0
