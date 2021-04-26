@@ -5,8 +5,11 @@ model.eval()
 # Download an example image from the pytorch website
 import urllib
 #url, filename = ("https://github.com/pytorch/hub/raw/master/images/dog.jpg", "Samoyed.jpg")
+#url, filename = ("https://zoipet.com/wp-content/uploads/2020/03/cho-chihuahua.jpg", "Chihuahua.jpg")
 #url, filename = ("https://www.animalrescueprofessionals.org/wp-content/uploads/2019/11/lion-africa-feature.jpg", "lion.jpg")
-url, filename = ("https://zoipet.com/wp-content/uploads/2020/03/cho-chihuahua.jpg", "Chihuahua.jpg")
+url, filename = ("https://static.inaturalist.org/photos/2529928/large.jpg", "kit fox.jpg")
+#url, filename = ("https://lithub.com/wp-content/uploads/2020/09/Pink_1.jpg", "axolotl.jpg")
+
 try: urllib.URLopener().retrieve(url, filename)
 except: urllib.request.urlretrieve(url, filename)
 
