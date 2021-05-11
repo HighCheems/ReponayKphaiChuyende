@@ -27,7 +27,7 @@ Tầng kết nối đầy đủ (FC) nhận đầu vào là các dữ liệu đ�
 |               | Khắc phục vấn đề ReLU chết cho những giá trị âm | Khả vi tại mọi nơi |
 2. ***Softmax:*** 
 ##### Áp dụng một hàm mũ tiêu chuẩn cho mỗi phần tử của lớp đầu ra, và sau đó chuẩn hóa các giá trị này bằng cách chia cho tổng của tất cả các cấp số nhân. Làm như vậy đảm bảo tổng của tất cả các giá trị lũy thừa cộng lại bằng 1.
-![img](softmax.PNG)
+![img](https://github.com/HighCheems/ReponayKphaiChuyende/blob/main/Project/DOCS/softmax.PNG)
 # Inception v1 Architecture
 Vào năm 2014, các nhà nghiên cứu của google đã đưa ra mạng Inception -> tham dự cuộc thi ImageNet 2014.
 
