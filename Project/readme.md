@@ -1,6 +1,8 @@
 # Tiến độ thực hiện
+```
 [x] Ngày 11/5: Thực hiện thử kernel 3x3 không có Padding và reLU. Kết quả ra chính xác với hình 224x224 Gray.
 [x] Ngày 18/5: Thực hiện, mô phỏng: kernel 3x3, 5x5, 7x7 có Padding và ReLU.
+```
 # Tổng quan
 Kiến trúc truyền thống của một mạng CNN - Mạng neural tích chập (Convolutional neural networks), còn được biết đến với tên CNNs, là một dạng mạng neural được cấu thành bởi các tầng sau:
 ![img](https://stanford.edu/~shervine/teaching/cs-230/illustrations/architecture-cnn-vi.jpeg?6b63c596f802c81d7cff2028ae6572ab)
