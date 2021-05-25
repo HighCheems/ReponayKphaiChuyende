@@ -3,7 +3,7 @@
 [x] Ngày 11/5: Thực hiện thử kernel 3x3 không có Padding , không có reLU , stride=1 . Kết quả ra chính xác với hình 224x224 Gray.
 [x] Ngày 18/5: Thực hiện, mô phỏng: kernel 3x3, 5x5, 7x7 có Padding và ReLU, tinh chỉnh được stride. (số decimal)
 [ ] Ngày 25/5: Thiết kế block diagram, tinh chỉnh thiết kế, khối avg, max (decimal).
-Hướng đi tiếp theo: Bắt đầu tách thiết kế như block diagram mới và thêm vào số floating point. Tìm cách kết nối các khối.
+Hướng đi tiếp theo: Bắt đầu tách thiết kế như block diagram mới và thêm vào số floating point. Tìm cách kết nối các khối nhỏ thành khối lớn có độ sâu.
 ```
 # Tổng quan
 Kiến trúc truyền thống của một mạng CNN - Mạng neural tích chập (Convolutional neural networks), còn được biết đến với tên CNNs, là một dạng mạng neural được cấu thành bởi các tầng sau:
