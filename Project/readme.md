@@ -2,6 +2,7 @@
 ```
 [x] Ngày 11/5: Thực hiện thử kernel 3x3 không có Padding , không có reLU , stride=1 . Kết quả ra chính xác với hình 224x224 Gray.
 [x] Ngày 18/5: Thực hiện, mô phỏng: kernel 3x3, 5x5, 7x7 có Padding và ReLU, tinh chỉnh được stride.
+[ ] Ngày 25/5: Thiết kế block diagram cho khối tính toán và tinh chỉnh lại thiết kế cho phù hợp. Đã tìm được weights khi training nhưng vẫn đang gặp rắc rối với labels và chưa test được đúng hay sai.
 ```
 # Tổng quan
 Kiến trúc truyền thống của một mạng CNN - Mạng neural tích chập (Convolutional neural networks), còn được biết đến với tên CNNs, là một dạng mạng neural được cấu thành bởi các tầng sau:
