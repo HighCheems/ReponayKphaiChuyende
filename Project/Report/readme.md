@@ -21,10 +21,16 @@ Thiết kế block diagram, tinh chỉnh thiết kế, khối avg, max.
 ### Soft:
 Train lại tập dog breed ban đầu thêm nhiều lần.
 #### Kết quả: Đúng với nhiều giống chó hơn nhưng vẫn chưa đạt.
-
-# Kế hoạch tiếp theo
 ## 1/6:
 ### HDL:
-Bắt đầu tách thiết kế như block diagram mới và thêm vào số floating point. Tìm cách kết nối các khối nhỏ thành khối lớn có độ sâu.
+
+#### Kết quả:
 ### Soft:
-Thay đổi tập train, bổ sung tập test
+Thay đổi thông số train
+#### Kết quả: Đúng với 10 giống chó, độ chính xác cao. Đã có file weights ở dạng decimal.
+# Kế hoạch tiếp theo
+## 8/6:
+### HDL: 
+
+### Soft:
+
