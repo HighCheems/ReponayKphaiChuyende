@@ -10,12 +10,58 @@ module Line_Buffer_Kernel_5 #(parameter IMG_Width=5, parameter Datawidth=8, para
 	input wire Valid_IN, CLK, CLR
 );
 
-	Line_Buffer_5 #(.IMG_Width(IMG_Width), .Datawidth(Datawidth)) Line1
+//	Line_Buffer_5 #(.IMG_Width(IMG_Width), .Datawidth(Datawidth)) Line1
+//	(
+//	.Out0(R40),.Out1(R41),.Out2(R42),.Out3(R43),.Out4(R44),
+//	.In(In),
+//	.CLK(CLK), .CLR(CLR), .WE(Valid_IN)
+//	);
+
+	REG #(Datawidth) RR44
 	(
-	.Out0(R40),.Out1(R41),.Out2(R42),.Out3(R43),.Out4(R44),
-	.In(In),
-	.CLK(CLK), .CLR(CLR), .WE(Valid_IN)
+	.CLK(CLK),
+	.CLR(CLR),
+	.DATA(In),
+	.WE(Valid_IN),
+	.DATA_OUT(R44)
 	);
+
+	REG #(Datawidth) RR43
+	(
+	.CLK(CLK),
+	.CLR(CLR),
+	.DATA(R44),
+	.WE(Valid_IN),
+	.DATA_OUT(R43)
+	);	
+	
+	REG #(Datawidth) RR42
+	(
+	.CLK(CLK),
+	.CLR(CLR),
+	.DATA(R43),
+	.WE(Valid_IN),
+	.DATA_OUT(R42)
+	);
+	
+	REG #(Datawidth) RR41
+	(
+	.CLK(CLK),
+	.CLR(CLR),
+	.DATA(R42),
+	.WE(Valid_IN),
+	.DATA_OUT(R41)
+	);
+
+	REG #(Datawidth) RR40
+	(
+	.CLK(CLK),
+	.CLR(CLR),
+	.DATA(R41),
+	.WE(Valid_IN),
+	.DATA_OUT(R40)
+	);	
+	
 	
 	// ---------------------------------------------------------
 

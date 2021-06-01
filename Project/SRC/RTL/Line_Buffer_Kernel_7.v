@@ -1,4 +1,4 @@
-module Line_Buffer_Kernel_7 #(parameter IMG_Width=8, parameter Datawidth=8, parameter Clock_Valid=IMG_Width*4-3)
+module Line_Buffer_Kernel_7 #(parameter IMG_Width=8, parameter Datawidth=8, parameter Clock_Valid=IMG_Width*3+4)
 (
 	output wire [Datawidth-1:0] 	R00,R01,R02,R03,R04,R05,R06,
 											R10,R11,R12,R13,R14,R15,R16,
@@ -12,12 +12,74 @@ module Line_Buffer_Kernel_7 #(parameter IMG_Width=8, parameter Datawidth=8, para
 	input wire Valid_IN, CLK, CLR
 );
 
-	Line_Buffer_7 #(.IMG_Width(IMG_Width), .Datawidth(Datawidth)) Line1
+//	Line_Buffer_7 #(.IMG_Width(IMG_Width), .Datawidth(Datawidth)) Line1
+//	(
+//	.Out0(R60),.Out1(R61),.Out2(R62),.Out3(R63),.Out4(R64),.Out5(R65),.Out6(R66),
+//	.In(In),
+//	.CLK(CLK), .CLR(CLR), .WE(Valid_IN)
+//	);
+		REG #(Datawidth) RR66
 	(
-	.Out0(R60),.Out1(R61),.Out2(R62),.Out3(R63),.Out4(R64),.Out5(R65),.Out6(R66),
-	.In(In),
-	.CLK(CLK), .CLR(CLR), .WE(Valid_IN)
+	.CLK(CLK),
+	.CLR(CLR),
+	.DATA(In),
+	.WE(Valid_IN),
+	.DATA_OUT(R66)
 	);
+
+	REG #(Datawidth) RR65
+	(
+	.CLK(CLK),
+	.CLR(CLR),
+	.DATA(R66),
+	.WE(Valid_IN),
+	.DATA_OUT(R65)
+	);	
+	
+	REG #(Datawidth) RR64
+	(
+	.CLK(CLK),
+	.CLR(CLR),
+	.DATA(R65),
+	.WE(Valid_IN),
+	.DATA_OUT(R64)
+	);
+	
+	REG #(Datawidth) RR63
+	(
+	.CLK(CLK),
+	.CLR(CLR),
+	.DATA(R64),
+	.WE(Valid_IN),
+	.DATA_OUT(R63)
+	);
+
+	REG #(Datawidth) RR62
+	(
+	.CLK(CLK),
+	.CLR(CLR),
+	.DATA(R63),
+	.WE(Valid_IN),
+	.DATA_OUT(R62)
+	);	
+	
+	REG #(Datawidth) RR61
+	(
+	.CLK(CLK),
+	.CLR(CLR),
+	.DATA(R62),
+	.WE(Valid_IN),
+	.DATA_OUT(R61)
+	);
+
+	REG #(Datawidth) RR60
+	(
+	.CLK(CLK),
+	.CLR(CLR),
+	.DATA(R61),
+	.WE(Valid_IN),
+	.DATA_OUT(R60)
+	);	
 	
 	// ---------------------------------------------------------
 	Line_Buffer_7 #(.IMG_Width(IMG_Width), .Datawidth(Datawidth)) Line2

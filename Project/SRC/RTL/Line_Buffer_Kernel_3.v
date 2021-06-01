@@ -1,4 +1,4 @@
-module Line_Buffer_Kernel_3 #(parameter IMG_Width=5, parameter Datawidth=8, parameter Clock_Valid=16)
+module Line_Buffer_Kernel_3 #(parameter IMG_Width=5, parameter Datawidth=8, parameter Clock_Valid=IMG_Width+2)
 (
 	output wire [Datawidth-1:0] R00,R01,R02,R10,R11,R12,R20,R21,R22,
 	output wire Valid_OUT,
@@ -6,12 +6,40 @@ module Line_Buffer_Kernel_3 #(parameter IMG_Width=5, parameter Datawidth=8, para
 	input wire Valid_IN, CLK, CLR
 );
 
-	Line_Buffer #(.IMG_Width(IMG_Width), .Datawidth(Datawidth)) Line1
+/*	Line_Buffer #(.IMG_Width(IMG_Width), .Datawidth(Datawidth)) Line1
 	(
 	.Out0(R20),.Out1(R21),.Out2(R22),
 	.In(In),
 	.CLK(CLK), .CLR(CLR), .WE(Valid_IN)
 	);
+*/
+	REG #(Datawidth) RR22
+	(
+	.CLK(CLK),
+	.CLR(CLR),
+	.DATA(In),
+	.WE(Valid_IN),
+	.DATA_OUT(R22)
+	);
+
+	REG #(Datawidth) RR21
+	(
+	.CLK(CLK),
+	.CLR(CLR),
+	.DATA(R22),
+	.WE(Valid_IN),
+	.DATA_OUT(R21)
+	);	
+	
+	REG #(Datawidth) RR20
+	(
+	.CLK(CLK),
+	.CLR(CLR),
+	.DATA(R21),
+	.WE(Valid_IN),
+	.DATA_OUT(R20)
+	);
+	
 
 	Line_Buffer #(.IMG_Width(IMG_Width), .Datawidth(Datawidth)) Line2
 	(
