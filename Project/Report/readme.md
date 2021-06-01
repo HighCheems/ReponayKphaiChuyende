@@ -27,10 +27,10 @@ Train lại tập dog breed ban đầu thêm nhiều lần.
 #### Kết quả:
 ### Soft:
 Thay đổi thông số train
-#### Kết quả: Đúng với 10 giống chó, độ chính xác cao. Đã có file weights ở dạng decimal.
+#### Kết quả: Độ chính xác cao. Đã có file weights ở dạng decimal.
 # Kế hoạch tiếp theo
 ## 8/6:
 ### HDL: 
 
 ### Soft:
-
+Gen verilog module: conv, max,
