@@ -590,7 +590,7 @@ CONV_2D_1_layer_6_channel_size_3 #(
 .In_3(In_3),
 .In_4(In_4),
 .In_5(In_5),
-.Out(Out_0),
+.Out(save_Out_0),
 .valid_out(valid_out_0)
 );
 
@@ -667,7 +667,7 @@ CONV_2D_1_layer_6_channel_size_3 #(
 .In_3(In_3),
 .In_4(In_4),
 .In_5(In_5),
-.Out(Out_1),
+.Out(save_Out_1),
 .valid_out(valid_out_1)
 );
 
@@ -744,7 +744,7 @@ CONV_2D_1_layer_6_channel_size_3 #(
 .In_3(In_3),
 .In_4(In_4),
 .In_5(In_5),
-.Out(Out_2),
+.Out(save_Out_2),
 .valid_out(valid_out_2)
 );
 
@@ -821,7 +821,7 @@ CONV_2D_1_layer_6_channel_size_3 #(
 .In_3(In_3),
 .In_4(In_4),
 .In_5(In_5),
-.Out(Out_3),
+.Out(save_Out_3),
 .valid_out(valid_out_3)
 );
 
@@ -898,7 +898,7 @@ CONV_2D_1_layer_6_channel_size_3 #(
 .In_3(In_3),
 .In_4(In_4),
 .In_5(In_5),
-.Out(Out_4),
+.Out(save_Out_4),
 .valid_out(valid_out_4)
 );
 
@@ -975,7 +975,7 @@ CONV_2D_1_layer_6_channel_size_3 #(
 .In_3(In_3),
 .In_4(In_4),
 .In_5(In_5),
-.Out(Out_5),
+.Out(save_Out_5),
 .valid_out(valid_out_5)
 );
 
@@ -1052,7 +1052,7 @@ CONV_2D_1_layer_6_channel_size_3 #(
 .In_3(In_3),
 .In_4(In_4),
 .In_5(In_5),
-.Out(Out_6),
+.Out(save_Out_6),
 .valid_out(valid_out_6)
 );
 
@@ -1129,7 +1129,7 @@ CONV_2D_1_layer_6_channel_size_3 #(
 .In_3(In_3),
 .In_4(In_4),
 .In_5(In_5),
-.Out(Out_7),
+.Out(save_Out_7),
 .valid_out(valid_out_7)
 );
 

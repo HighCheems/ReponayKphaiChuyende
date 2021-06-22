@@ -3,7 +3,6 @@ module CONV_2D_4_layer_12_channel_size_1 #(
 parameter IMG_Width=3, 
 parameter IMG_Height=3, 
 parameter Datawidth=32, 
-parameter Stride=1,
 parameter ReLU=0,
 parameter w00 = 1,
 parameter w01 = 1,
@@ -119,7 +118,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w00),
 .w1(w01),
@@ -151,7 +149,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_0),
+.Out(save_Out_0),
 .valid_out(valid_out_0)
 );
 
@@ -160,7 +158,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w10),
 .w1(w11),
@@ -192,7 +189,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_1),
+.Out(save_Out_1),
 .valid_out(valid_out_1)
 );
 
@@ -201,7 +198,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w20),
 .w1(w21),
@@ -233,7 +229,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_2),
+.Out(save_Out_2),
 .valid_out(valid_out_2)
 );
 
@@ -242,7 +238,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w30),
 .w1(w31),
@@ -274,7 +269,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_3),
+.Out(save_Out_3),
 .valid_out(valid_out_3)
 );
 

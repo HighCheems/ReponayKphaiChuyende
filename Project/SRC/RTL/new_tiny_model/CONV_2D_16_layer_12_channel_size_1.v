@@ -2,7 +2,6 @@ module CONV_2D_16_layer_12_channel_size_1 #(
 parameter IMG_Width=3, 
 parameter IMG_Height=3, 
 parameter Datawidth=32, 
-parameter Stride=1,
 parameter ReLU=0,
 parameter w0_0 = 1,
 parameter w0_1 = 1,
@@ -333,7 +332,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w0_0),
 .w1(w0_1),
@@ -365,7 +363,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_0),
+.Out(save_Out_0),
 .valid_out(valid_out_0)
 );
 
@@ -374,7 +372,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w1_0),
 .w1(w1_1),
@@ -406,7 +403,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_1),
+.Out(save_Out_1),
 .valid_out(valid_out_1)
 );
 
@@ -415,7 +412,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w2_0),
 .w1(w2_1),
@@ -447,7 +443,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_2),
+.Out(save_Out_2),
 .valid_out(valid_out_2)
 );
 
@@ -456,7 +452,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w3_0),
 .w1(w3_1),
@@ -488,7 +483,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_3),
+.Out(save_Out_3),
 .valid_out(valid_out_3)
 );
 
@@ -497,7 +492,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w4_0),
 .w1(w4_1),
@@ -529,7 +523,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_4),
+.Out(save_Out_4),
 .valid_out(valid_out_4)
 );
 
@@ -538,7 +532,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w5_0),
 .w1(w5_1),
@@ -570,7 +563,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_5),
+.Out(save_Out_5),
 .valid_out(valid_out_5)
 );
 
@@ -579,7 +572,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w6_0),
 .w1(w6_1),
@@ -611,7 +603,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_6),
+.Out(save_Out_6),
 .valid_out(valid_out_6)
 );
 
@@ -620,7 +612,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w7_0),
 .w1(w7_1),
@@ -652,7 +643,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_7),
+.Out(save_Out_7),
 .valid_out(valid_out_7)
 );
 
@@ -661,7 +652,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w8_0),
 .w1(w8_1),
@@ -693,7 +683,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_8),
+.Out(save_Out_8),
 .valid_out(valid_out_8)
 );
 
@@ -702,7 +692,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w9_0),
 .w1(w9_1),
@@ -734,7 +723,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_9),
+.Out(save_Out_9),
 .valid_out(valid_out_9)
 );
 
@@ -743,7 +732,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w10_0),
 .w1(w10_1),
@@ -775,7 +763,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_10),
+.Out(save_Out_10),
 .valid_out(valid_out_10)
 );
 
@@ -784,7 +772,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w11_0),
 .w1(w11_1),
@@ -816,7 +803,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_11),
+.Out(save_Out_11),
 .valid_out(valid_out_11)
 );
 
@@ -825,7 +812,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w12_0),
 .w1(w12_1),
@@ -857,7 +843,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_12),
+.Out(save_Out_12),
 .valid_out(valid_out_12)
 );
 
@@ -866,7 +852,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w13_0),
 .w1(w13_1),
@@ -898,7 +883,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_13),
+.Out(save_Out_13),
 .valid_out(valid_out_13)
 );
 
@@ -907,7 +892,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w14_0),
 .w1(w14_1),
@@ -939,7 +923,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_14),
+.Out(save_Out_14),
 .valid_out(valid_out_14)
 );
 
@@ -948,7 +932,6 @@ CONV_2D_12_channel_size_1 #(
 .IMG_Width(IMG_Width), 
 .IMG_Height(IMG_Height), 
 .Datawidth(Datawidth), 
-.Stride(Stride),
 .ReLU(ReLU),
 .w0(w15_0),
 .w1(w15_1),
@@ -980,7 +963,7 @@ CONV_2D_12_channel_size_1 #(
 .In_9(In_9),
 .In_10(In_10),
 .In_11(In_11),
-.Out(Out_15),
+.Out(save_Out_15),
 .valid_out(valid_out_15)
 );
 

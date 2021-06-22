@@ -1305,7 +1305,7 @@ CONV_2D_1_layer_16_channel_size_5 #(
 .In_13(In_13),
 .In_14(In_14),
 .In_15(In_15),
-.Out(Out_0),
+.Out(save_Out_0),
 .valid_out(valid_out_0)
 );
 
@@ -1738,7 +1738,7 @@ CONV_2D_1_layer_16_channel_size_5 #(
 .In_13(In_13),
 .In_14(In_14),
 .In_15(In_15),
-.Out(Out_1),
+.Out(save_Out_1),
 .valid_out(valid_out_1)
 );
 
