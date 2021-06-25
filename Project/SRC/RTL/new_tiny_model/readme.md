@@ -24,7 +24,7 @@ Maxpool 3x3 - stride 2.
   Maxpool 3x3 - stride 1.
    -> Conv 1x1 - 12 channel - filters: 4 - stride 1 - weights: 1*12*4 + 4 bias.     out:4 
 
-*Inception: Input 12 channel - Output 12 channel -  *doing now*
+*Inception: Input 12 channel - Output 12 channel -  *testing*
   Conv 1x1 - 12 channel - filters: 4 - stride 1 - weights: 1*12*4 + 4 bias.           out:4
   Conv 1x1 - 12 channel - filters: 8 - stride 1 - weights: 1*12*8 + 8 bias.       
     -> Conv 3x3 - 8 channel - filters: 2 - stride 1 - weights: 3*3*8*2 + 2 bias.      out:2
