@@ -15,7 +15,7 @@ Maxpool 3x3 - stride 2.
 ==> 28x28x12
 
 [] Stage 3: 
-*Inception: Input 12 channel - Output 12 channel (done - need weights add weights later)
+*Inception: Input 12 channel - Output 12 channel (done - add weights later)
   Conv 1x1 - 12 channel - filters: 4 - stride 1 - weights: 1*12*4 + 4 bias.         out:4
   Conv 1x1 - 12 channel - filters: 6 - stride 1 - weights: 1*12*6 + 6 bias.
    -> Conv 3x3 - 6 channel - filters: 2 - stride 1 - weights: 3*3*6*2 + 2 bias.     out:2
