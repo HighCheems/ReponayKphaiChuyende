@@ -23,14 +23,27 @@ Train lại tập dog breed ban đầu thêm nhiều lần.
 #### Kết quả: Đúng với nhiều giống chó hơn nhưng vẫn chưa đạt.
 ## 1/6:
 ### HDL:
-
+Có mẫu file để bắt đầu quá trình gen.
 #### Kết quả:
 ### Soft:
 Thay đổi thông số train
 #### Kết quả: Độ chính xác cao. Đã có file weights ở dạng decimal.
-# Kế hoạch tiếp theo
 ## 8/6:
 ### HDL: 
-
+Gen được các module cơ bản, tinh chỉnh lại thiết kế theo 
 ### Soft:
-Gen verilog module: conv, max,
+Gen verilog module: conv, max, avg theo từng số lượng kênh (channel).
+# Kế hoạch tiếp theo
+## 22/6:
+### HDL: 
+Sau khi gen được file, đổi thiết kế phù hợp với mạng train tinh chỉnh (tiny_model).
+### Soft:
+Gen verilog module: conv, max, avg có số lượng kênh và depth theo mạng train tinh chỉnh.
+## 27/6:
+### HDL: 
+Ghép được stage 1 , stage 2 , stage 3 , stage 4 với các khối inception liên kết.
+## 28/7:
+## HDL: 
+Ghép tiếp stage 5 và full connected vào mạch.
+## Tiếp tục:
+Đổi toàn bộ khối tính toán qua floating point.
