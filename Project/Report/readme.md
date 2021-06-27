@@ -42,7 +42,9 @@ Gen verilog module: conv, max, avg có số lượng kênh và depth theo mạng
 ### HDL: 
 Ghép được stage 1 , stage 2 , stage 3 , stage 4 với các khối inception liên kết. Đã kiểm tra, đạt kết quả mong muốn.
 # Kế hoạch tiếp theo
-## 28/7:
+## 28/6:
 ## HDL: 
 Ghép tiếp stage 5 và full connected vào mạch.
-Có được mạch hoàn chỉnh-> Test và đổi toàn bộ thiết kế sang floating point
+Có được mạch hoàn chỉnh
+-> Test và đổi toàn bộ thiết kế sang floating point.
+-> Nạp weights chính thức vào mạch (nạp ở từng stage qua parameter) theo số floating point.
