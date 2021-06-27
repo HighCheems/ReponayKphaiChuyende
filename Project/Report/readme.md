@@ -40,7 +40,7 @@ Sau khi gen được file, đổi thiết kế phù hợp với mạng train tin
 Gen verilog module: conv, max, avg có số lượng kênh và depth theo mạng train tinh chỉnh mới, giảm số depth của từng khối để giảm độ nặng của model.
 ## 27/6:
 ### HDL: 
-Ghép được stage 1 , stage 2 , stage 3 , stage 4 với các khối inception liên kết. Đã kiểm tra, đạt kết quả mong muốn.
+Ghép được stage 1 , stage 2 , stage 3 , stage 4 bao gồm các khối inception liên kết. Đã kiểm tra, đạt kết quả mong muốn.
 # Kế hoạch tiếp theo
 ## 28/6:
 ## HDL: 
