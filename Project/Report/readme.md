@@ -33,17 +33,16 @@ Thay đổi thông số train
 Gen được các module cơ bản, tinh chỉnh lại thiết kế theo 
 ### Soft:
 Gen verilog module: conv, max, avg theo từng số lượng kênh (channel).
-# Kế hoạch tiếp theo
 ## 22/6:
 ### HDL: 
 Sau khi gen được file, đổi thiết kế phù hợp với mạng train tinh chỉnh (tiny_model).
 ### Soft:
-Gen verilog module: conv, max, avg có số lượng kênh và depth theo mạng train tinh chỉnh.
+Gen verilog module: conv, max, avg có số lượng kênh và depth theo mạng train tinh chỉnh mới, giảm số depth của từng khối để giảm độ nặng của model.
 ## 27/6:
 ### HDL: 
 Ghép được stage 1 , stage 2 , stage 3 , stage 4 với các khối inception liên kết.
+# Kế hoạch tiếp theo
 ## 28/7:
 ## HDL: 
 Ghép tiếp stage 5 và full connected vào mạch.
-## Tiếp tục:
-Đổi toàn bộ khối tính toán qua floating point.
+Có được mạch hoàn chỉnh-> Test và đổi toàn bộ thiết kế sang floating point
